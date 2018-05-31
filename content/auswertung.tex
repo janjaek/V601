@@ -1,9 +1,166 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Bestimmung der Energieverteilung der Elektronen}
+Die Messwerte zur Bestimmung der Energieverteilung bei $\SI{20}{\degreeCelsius}$ sind in Tabelle \ref{tab:e20} aufgetragen.
+Die Messwerte werden dem Graphen des $XY$-Schreibers so entnommen, dass für große Steigung viele Werte aufgenommen werden.
+Die Höhe ist hierbei eine Größe proportional zum Strom $I_A$.
+\begin{table}[H]
+    \caption{Messwerte der Energiekurve bei $\SI{20}{\degreeCelsius}$.}
+    \label{tab:e20}
+    \centering
+    \begin{tabular}{S[table-format=2.3(0)e0] S[table-format=2.2(0)e0]}
+        \toprule
+{$U/\si{\volt}$} & { Höhe$/\si{\centi\meter}$} \\
+		\midrule
+1.000 &      14.65 \\
+2.000 &      14.60 \\
+3.000 &      14.50 \\
+4.000 &      14.40 \\
+5.000 &      14.20 \\
+6.000 &      14.00 \\
+6.500 &    13.85 \\
+7.000 &      13.60 \\
+7.500 &    13.30 \\
+8.000 &      12.95 \\
+8.500 &    12.40 \\
+9.000 &      11.55 \\
+9.250 &   10.95 \\
+9.500 &    10.00 \\
+9.625 &  8.70 \\
+9.750 &   6.30 \\
+9.813 &  4.5 \\
+9.875 &  2.70 \\
+10.000 &      1.00 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+\noindent Die differentielle Energieverteilung, welche sich ergibt aus $I_A(U_A)-I_A(U_A+\symup\Delta U_A)$ aufgetragen gegen $U_A$ aufgetragen, ist in Diagramm \ref{fig:e20} dargestellt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{build/energie20.pdf}
+	\caption{Differentielle Energieverteilung der Elektronen bei $\SI{20}{\degreeCelsius}$.}
+	\label{fig:e20}
 \end{figure}
+
+\noindent Aus dem Diagramm \ref{fig:e20} lässt sich nun über das Maximum das Kontaktpotential bestimmen:
+\begin{equation}
+	K = U_B - {U_B}_\text{eff} = \SI{1.19\pm0.06}{\volt}
+\end{equation}
+Wobei $U_B = \SI{11}{\volt}$ und ${U_B}_\text{eff} = \SI{9.813\pm0.063}{\volt}$, die Stelle des Maximums mit $\symup\Delta U_A$ als Unsicherheit.
+\\
+Die Messwerte für die Energieverteilung bei $\SI{140}{\degreeCelsius}$ sind in Tabelle \ref{tab:e140} aufgetragen.
+Auch hier ist die Höhe proportional zu $I_A$.
+\begin{table}[H]
+    \caption{Messwerte der Energiekurve bei $\SI{140}{\degreeCelsius}$.}
+    \label{tab:e140}
+    \centering
+    \begin{tabular}{S[table-format=2.1(0)e0] S[table-format=2.2(0)e0]}
+        \toprule
+{$U/\si{\volt}$} & { Höhe$/\si{\centi\meter}$} \\
+		\midrule
+0.0  & 14.60 \\
+1.0  & 12.20 \\
+2.0  & 9.45 \\
+3.0  & 6.60 \\
+4.0  & 3.85 \\
+4.5  & 2.65 \\
+5.0  & 1.90 \\
+6.0  & 1.10 \\
+7.0  & 1.30 \\
+8.0  & 1.05 \\
+9.0  & 0.60 \\
+10.0 & 0.30 \\
+       \bottomrule
+    \end{tabular}
+\end{table}
+
+\noindent Die differentielle Energieverteilung ist in Diagramm \ref{fig:e140} zu sehen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{build/energie140.pdf}
+	\caption{Messwerte der Energiekurve bei $\SI{140}{\degreeCelsius}$.}
+	\label{fig:e140}
+\end{figure}
+\noindent
+
+\subsection{Bestimmung der Anregungsenergie}
+Um die Anregungsenergie des Qecksilbers zu bestimmen wird die Franck-Hertz-Kurve betrachtet, insbesondere der Abstand zwischen ihren lokalen Maxima, soweit diese noch erkennbar sind.
+Die Abstände der Maxima sind in Tabelle \ref{tab:fh} aufgetragen.
+\begin{table}[H]
+    \caption{Messwerte der Energiekurve bei $\SI{140}{\degreeCelsius}$.}
+    \label{tab:fh}
+    \centering
+    \begin{tabular}{S[table-format=1.2(0)e0]}
+        \toprule
+{$U_1/\si{\volt}$} \\
+		\midrule
+5.54 \\
+4.57 \\
+4.67 \\
+4.78 \\
+4.67 \\
+4.89 \\
+5.11 \\
+       \bottomrule
+    \end{tabular}
+\end{table}
+
+\noindent Für die Spannung $U_1$ ergibt sich ein Mittelwert von:
+\begin{equation}
+	\overline{U_1} = \SI{4.89\pm0.13}{\volt}
+\end{equation}
+Es ergibt sich somit eine Abstrahlungsfrequenz des Quecksilbers von
+\begin{equation}
+	\nu = \frac{e}{h}\, \overline{U_1} = \SI{1.18\pm0.3e15}{\hertz},
+\end{equation}
+wobei $h$\cite{plank} das Plank'sche Wirkungsquantum ist.
+
+\subsection{Bestimmung der Ionisierungsenergie}
+Zur Bestimmung der Ionisationsenergie wird aus dem zugehörigen Graphen der Bereich um die positiv steilste Stelle mittels linearer Regression gefittet.
+Am Schnittpunkt der erhaltenen Gerade mit der $x$-Achse lässt sich $U_\text{ion} + K$ ablesen.
+Die aus dem Graphen abgelesenen Messwerte sind in Tabelle \ref{tab:ion} aufgetragen.
+Die Höhe ist wieder proportional zu $I_A$.
+\begin{table}[H]
+    \caption{Messwerte der Ionisationsenergie.}
+    \label{tab:ion}
+    \centering
+    \begin{tabular}{S[table-format=2.2(0)e0] S[table-format=1.1(0)e0]}
+        \toprule
+{$U/\si{\volt}$} & { Höhe$/\si{\centi\meter}$} \\
+		\midrule
+25.00  & 2.1 \\
+26.09  & 2.3 \\
+27.17  & 2.6 \\
+28.26  & 3.0 \\
+29.35  & 3.3 \\
+30.22  & 3.6 \\
+       \bottomrule
+    \end{tabular}
+\end{table}
+\noindent Der lineare Fit wird mit Python/SciPy mit der Vorschrift
+\begin{equation}
+	f(x) = mx+n
+\end{equation}
+erstellt und ist in Abbildung \ref{fig:ion} dargestellt.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{build/ion.pdf}
+	\caption{Messwerte und linearer Fit der Ionisationsenergiemessung.}
+	\label{fig:ion}
+\end{figure}
+\noindent Die Parameter ergeben sich zu:
+\begin{align}
+	m &= \SI{0.29\pm0.01}{\centi\meter\per\volt} \\
+	n &= \SI{-5.33\pm0.36}{\centi\meter}
+\end{align}
+Die Ionisationsspannung ergibt sich zu:
+\begin{equation}
+	U_\text{ion} = \frac{-n}{m} - K = \SI{17.19\pm1.40}{\volt} 
+\end{equation}
+Die Unsicherheit berechnet sich wie folgt:
+\begin{equation}
+	\symup\Delta U_\text{ion} = \sqrt{\left(\frac{\symup\Delta n}{m}\right)^2 + \left(\frac{n\symup\Delta m}{m^2}\right)^2 + \symup\Delta K ^2} 
+\end{equation}

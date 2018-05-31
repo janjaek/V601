@@ -1,0 +1,8 @@
+##Messwerte um die sätrkste Steigung der Ionisierungsspannung.
+#$U/\si{\volt}$		Höhe$/\si{\centi\meter}$
+25		2.1
+26.09	2.3
+27.17	2.6
+28.26	3.0
+29.35	3.3
+30.22	3.6
