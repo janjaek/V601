@@ -1,41 +1,73 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-\subsection{Bestimmung der Energieverteilung der Elektronen}
-Die Messwerte zur Bestimmung der Energieverteilung bei $\SI{20}{\degreeCelsius}$ sind in Tabelle \ref{tab:e20} aufgetragen.
+\subsection{Bestimmung der differentiellen Energieverteilung der Elektronen}
+Die Messwerte zur Bestimmung der differentiellen Energieverteilung bei $\SI{20}{\degreeCelsius}$ sind in Tabelle \ref{tab:e20} aufgetragen.
 Die Messwerte werden dem Graphen des $XY$-Schreibers so entnommen, dass für große Steigung viele Werte aufgenommen werden.
 Die Höhe ist hierbei eine Größe proportional zum Strom $I_A$.
+Um die Eichung der $X$-Achse des $XY$-Schreibers zu ermitteln wird der Abstand der eingezeichneten Markierungen gemessen und anschließend gemittelt.
+Die Werte der Eichung sind in Tabelle \ref{tab:eich1} aufgetragen.
+
 \begin{table}[H]
-    \caption{Messwerte der Energiekurve bei $\SI{20}{\degreeCelsius}$.}
+    \caption{Abstände der Eichmarkierungen.}
+    \label{tab:eich1}
+    \centering
+    \begin{tabular}{S[table-format=1.2(0)e0]}
+        \toprule
+{Abstand der Markierungen$/\si{\centi\meter}$} \\
+		\midrule
+2.2 \\
+2.4 \\
+2.35 \\
+2.35 \\
+2.2 \\
+2.35 \\
+2.4 \\
+2.35 \\
+2.42 \\
+2.55 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\noindent
+Es ergibt sich somit, bei einer Einteilung von $\SI{1}{\volt}$ pro Einheit, ein mittlerer Umrechnungsfaktor $A_1$ von:
+\begin{equation}
+	\overline{A_1} = \SI{2.36\pm0.03}{\centi\meter\per\volt}
+\end{equation}
+
+\begin{table}[H]
+    \caption{Messwerte der integralen Energiekurve bei $\SI{20}{\degreeCelsius}$.}
     \label{tab:e20}
     \centering
-    \begin{tabular}{S[table-format=2.3(0)e0] S[table-format=2.2(0)e0]}
+    \begin{tabular}{S[table-format=2.3(5)e0] S[table-format=2.2(0)e0]}
         \toprule
 {$U/\si{\volt}$} & { Höhe$/\si{\centi\meter}$} \\
 		\midrule
-1.000 &      14.65 \\
-2.000 &      14.60 \\
-3.000 &      14.50 \\
-4.000 &      14.40 \\
-5.000 &      14.20 \\
-6.000 &      14.00 \\
-6.500 &    13.85 \\
-7.000 &      13.60 \\
-7.500 &    13.30 \\
-8.000 &      12.95 \\
-8.500 &    12.40 \\
-9.000 &      11.55 \\
-9.250 &   10.95 \\
-9.500 &    10.00 \\
-9.625 &  8.70 \\
-9.750 &   6.30 \\
-9.813 &  4.5 \\
-9.875 &  2.70 \\
-10.000 &      1.00 \\
+1.000\pm0.013  &      14.65 \\
+2.000\pm0.025  &      14.60 \\
+3.000\pm0.038  &      14.50 \\
+4.000\pm0.051  &      14.40 \\
+5.000\pm0.064  &      14.20 \\
+6.000\pm0.076  &      14.00 \\
+6.500\pm0.083  &    13.85 \\
+7.000\pm0.089  &      13.60 \\
+7.500\pm0.095  &    13.30 \\
+8.000\pm0.102  &      12.95 \\
+8.500\pm0.108  &    12.40 \\
+9.000\pm0.114  &      11.55 \\
+9.250\pm0.118  &   10.95 \\
+9.500\pm0.121  &    10.00 \\
+9.625\pm0.122  &  8.70 \\
+9.750\pm0.124  &   6.30 \\
+9.813\pm0.125  &  4.5 \\
+9.875\pm0.126  &  2.70 \\
+10.000\pm0.127  &      1.00 \\
+10.125\pm0.129  &	 0.50 \\
+10.250 \pm0.130  &	 0.40 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-\noindent Die differentielle Energieverteilung, welche sich ergibt aus $I_A(U_A)-I_A(U_A+\symup\Delta U_A)$ aufgetragen gegen $U_A$ aufgetragen, ist in Diagramm \ref{fig:e20} dargestellt.
+\noindent Die differentielle Energieverteilung, welche sich ergibt aus $I_A(U_A)-I_A(U_A+\symup\Delta U_A)$, aufgetragen gegen $U_A$, ist in Abbildung \ref{fig:e20} dargestellt.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{build/energie20.pdf}
@@ -43,66 +75,94 @@ Die Höhe ist hierbei eine Größe proportional zum Strom $I_A$.
 	\label{fig:e20}
 \end{figure}
 
-\noindent Aus dem Diagramm \ref{fig:e20} lässt sich nun über das Maximum das Kontaktpotential bestimmen:
+\noindent Aus der Abbildung \ref{fig:e20} lässt sich nun gemäß Gleichung \eqref{eq:k} über das Maximum das Kontaktpotential bestimmen:
 \begin{equation}
-	K = U_B - {U_B}_\text{eff} = \SI{1.19\pm0.06}{\volt}
+	K = U_B - {U_B}_\text{eff} = \SI{1.19}{\volt}
 \end{equation}
-Wobei $U_B = \SI{11}{\volt}$ und ${U_B}_\text{eff} = \SI{9.813\pm0.063}{\volt}$, die Stelle des Maximums mit $\symup\Delta U_A$ als Unsicherheit.
+Wobei $U_B = \SI{11}{\volt}$ und ${U_B}_\text{eff} = \SI{9.813\pm0.063}{\volt}$, die Stelle des Maximums sind.
 \\
 Die Messwerte für die Energieverteilung bei $\SI{140}{\degreeCelsius}$ sind in Tabelle \ref{tab:e140} aufgetragen.
 Auch hier ist die Höhe proportional zu $I_A$.
 \begin{table}[H]
-    \caption{Messwerte der Energiekurve bei $\SI{140}{\degreeCelsius}$.}
+    \caption{Messwerte der integralen Energiekurve bei $\SI{140}{\degreeCelsius}$.}
     \label{tab:e140}
     \centering
-    \begin{tabular}{S[table-format=2.1(0)e0] S[table-format=2.2(0)e0]}
+    \begin{tabular}{S[table-format=2.1(3)e0] S[table-format=2.2(0)e0]}
         \toprule
 {$U/\si{\volt}$} & { Höhe$/\si{\centi\meter}$} \\
 		\midrule
-0.0  & 14.60 \\
-1.0  & 12.20 \\
-2.0  & 9.45 \\
-3.0  & 6.60 \\
-4.0  & 3.85 \\
-4.5  & 2.65 \\
-5.0  & 1.90 \\
-6.0  & 1.10 \\
-7.0  & 1.30 \\
-8.0  & 1.05 \\
-9.0  & 0.60 \\
-10.0 & 0.30 \\
+0.0\pm0.0   & 14.60 \\
+1.0\pm0.0   & 12.20 \\
+2.0\pm0.0   & 9.45 \\
+3.0\pm0.0   & 6.60 \\
+4.0\pm0.1   & 3.85 \\
+4.5\pm0.1   & 2.65 \\
+5.0\pm0.1   & 1.90 \\
+6.0\pm0.1   & 1.10 \\
+7.0\pm0.1   & 1.30 \\
+8.0\pm0.1   & 1.05 \\
+9.0\pm0.1   & 0.60 \\
+10.0\pm0.1  & 0.30 \\
        \bottomrule
     \end{tabular}
 \end{table}
 
-\noindent Die differentielle Energieverteilung ist in Diagramm \ref{fig:e140} zu sehen.
+\noindent Es wird für diese Werte der gleiche Umrechnungsfaktor $A_1$, wie zuvor benutzt.
+Die differentielle Energieverteilung ist in Abbildung \ref{fig:e140} zu sehen.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{build/energie140.pdf}
-	\caption{Messwerte der Energiekurve bei $\SI{140}{\degreeCelsius}$.}
+	\caption{Differentielle Energieverteilung bei $\SI{140}{\degreeCelsius}$.}
 	\label{fig:e140}
 \end{figure}
 \noindent
 
 \subsection{Bestimmung der Anregungsenergie}
-Um die Anregungsenergie des Qecksilbers zu bestimmen wird die Franck-Hertz-Kurve betrachtet, insbesondere der Abstand zwischen ihren lokalen Maxima, soweit diese noch erkennbar sind.
+Um die Anregungsenergie des Quecksilbers zu bestimmen wird die Franck-Hertz-Kurve betrachtet, insbesondere der Abstand zwischen ihren lokalen Maxima, soweit diese noch erkennbar sind.
+In Tabelle \ref{tab:eich2} sind zunächst die Abstände der Eichmarkierungen aufgetragen.
+\begin{table}[H]
+    \caption{Abstände der Eichmarkierungen.}
+    \label{tab:eich2}
+    \centering
+    \begin{tabular}{S[table-format=1.2(0)e0]}
+        \toprule
+{Abstand der Markierungen$/\si{\centi\meter}$} \\
+		\midrule
+2.3 \\
+2.1 \\
+2.35 \\
+2.3 \\
+2.35 \\
+2.2 \\
+2.25 \\
+2.25 \\
+2.45 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\noindent
+Es ergibt sich somit, bei einer Einteilung von $\SI{5}{\volt}$ pro Einheit, ein mittlerer Umrechnungsfaktor $A_2$ von:
+\begin{equation}
+	\overline{A_2} = \SI{0.46\pm0.01}{\centi\meter\per\volt}
+\end{equation}
+
 Die Abstände der Maxima sind in Tabelle \ref{tab:fh} aufgetragen.
 \begin{table}[H]
     \caption{Messwerte der Energiekurve bei $\SI{140}{\degreeCelsius}$.}
     \label{tab:fh}
     \centering
-    \begin{tabular}{S[table-format=1.2(0)e0]}
+    \begin{tabular}{S[table-format=1.2(4)e0]}
         \toprule
 {$U_1/\si{\volt}$} \\
 		\midrule
-5.54 \\
-4.57 \\
-4.67 \\
-4.78 \\
-4.67 \\
-4.89 \\
-5.11 \\
+5.54\pm0.06 \\
+4.57\pm0.05 \\
+4.67\pm0.05 \\
+4.78\pm0.05 \\
+4.67\pm0.05 \\
+4.89\pm0.05 \\
+5.11\pm0.05 \\
        \bottomrule
     \end{tabular}
 \end{table}
@@ -120,26 +180,53 @@ wobei $h$\cite{plank} das Plank'sche Wirkungsquantum ist.
 \subsection{Bestimmung der Ionisierungsenergie}
 Zur Bestimmung der Ionisationsenergie wird aus dem zugehörigen Graphen der Bereich um die positiv steilste Stelle mittels linearer Regression gefittet.
 Am Schnittpunkt der erhaltenen Gerade mit der $x$-Achse lässt sich $U_\text{ion} + K$ ablesen.
+In Tabelle \ref{tab:eich3} sind zunächst die Abstände der Eichmarkierungen aufgetragen.
+\begin{table}[H]
+    \caption{Abstände der Eichmarkierungen.}
+    \label{tab:eich3}
+    \centering
+    \begin{tabular}{S[table-format=1.2(0)e0]}
+        \toprule
+{Abstand der Markierungen$/\si{\centi\meter}$} \\
+		\midrule
+2.25 \\
+2.4 \\
+2.2 \\
+2.4 \\
+2.25 \\
+2.25 \\
+2.45 \\
+2.4 \\
+2.15 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\noindent
+Es ergibt sich somit, bei einer Einteilung von $\SI{5}{\volt}$ pro Einheit, ein mittlerer Umrechnungsfaktor $A_2$ von:
+\begin{equation}
+	\overline{A_2} = \SI{0.46\pm0.01}{\centi\meter\per\volt}
+\end{equation}
+
 Die aus dem Graphen abgelesenen Messwerte sind in Tabelle \ref{tab:ion} aufgetragen.
 Die Höhe ist wieder proportional zu $I_A$.
 \begin{table}[H]
     \caption{Messwerte der Ionisationsenergie.}
     \label{tab:ion}
     \centering
-    \begin{tabular}{S[table-format=2.2(0)e0] S[table-format=1.1(0)e0]}
+    \begin{tabular}{S[table-format=2.2(4)e0] S[table-format=1.1(0)e0]}
         \toprule
 {$U/\si{\volt}$} & { Höhe$/\si{\centi\meter}$} \\
 		\midrule
-25.00  & 2.1 \\
-26.09  & 2.3 \\
-27.17  & 2.6 \\
-28.26  & 3.0 \\
-29.35  & 3.3 \\
-30.22  & 3.6 \\
+25.00\pm0.25   & 2.1 \\
+26.09\pm0.26   & 2.3 \\
+27.17\pm0.27   & 2.6 \\
+28.26\pm0.28   & 3.0 \\
+29.35\pm0.29   & 3.3 \\
+30.22\pm0.30   & 3.6 \\
        \bottomrule
     \end{tabular}
 \end{table}
-\noindent Der lineare Fit wird mit Python/SciPy mit der Vorschrift
+\noindent Der lineare Fit wird mit Python/SciPy\cite{scipy} mit der Vorschrift
 \begin{equation}
 	f(x) = mx+n
 \end{equation}
